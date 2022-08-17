@@ -1,0 +1,23 @@
+
+
+	select * from employee where salary >= 80000;
+	
+	class Car {
+    public void drive(string driverName) { 
+    
+    }
+    public int drive(string driverName) {
+        return 10;
+    }
+}
+	
+	
+try{
+    
+}
+catch(Exception ex){
+  throw
+}
+catch(NullReferenceException ex){
+ throw
+}

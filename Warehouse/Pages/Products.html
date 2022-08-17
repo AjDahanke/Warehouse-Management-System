@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>Products</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 50px;
+        border-top: 1px solid #bbb;
+      }
+      input {
+        width: 250px;
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 0;
+      }
+      span {
+        padding: 10px 0 0;
+      }
+      #insert,
+      #reset {
+        width: 60px;
+        margin-right: 10px;
+        padding: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body style="padding: 0 100px 20px">
+    <br />
+    <h2>PRODUCT DETAILS</h2>
+
+    <form role="form" method="POST" action="../Scripts/Products/P_insert.php">
+      <h3>INSERT</h3>
+      <input type="number" name="IP_id" placeholder="Product ID" />
+      <input type="text" name="IP_name" placeholder="Product Name" />
+      <input type="number" name="IP_price" placeholder="Product Price" />
+
+      <div>
+        <input type="text" name="IP_md" placeholder="Manufacturing Date" onfocus="(this.type = 'date')" />&nbsp;&nbsp;
+        <input type="text" name="IP_ed" placeholder="Expiry Date" onfocus="(this.type = 'date')" />
+      </div>
+
+      <div>
+        <input type="text" name="IP_type" placeholder="Product Type" />&nbsp;&nbsp;
+        <input type="number" name="IP_by" placeholder="Manufactured by" />
+      </div>
+
+      <span>
+        <input type="submit" id="insert" value="Insert" />
+        <input type="reset" id="reset" value="Clear" />
+      </span>
+    </form>
+
+    <form role="form" method="POST" action="../Scripts/Products/P_update.php">
+      <h3>UPDATE</h3>
+      <input type="number" name="UP_id" placeholder="Search by Product ID" />
+      <input type="text" name="UP_name" placeholder="Product Name" />
+      <input type="number" name="UP_price" placeholder="Product Price" />
+
+      <div>
+        <input type="text" name="UP_md" placeholder="Manufacturing Date" onfocus="(this.type = 'date')" />&nbsp;&nbsp;
+        <input type="text" name="UP_ed" placeholder="Expiry Date" onfocus="(this.type = 'date')" />
+      </div>
+
+      <div>
+        <input type="text" name="UP_type" placeholder="Product Type" />&nbsp;&nbsp;
+        <input type="number" name="UP_by" placeholder="Manufactured by" />
+      </div>
+
+      <span>
+        <input type="submit" id="insert" value="Update" />
+        <input type="reset" id="reset" value="Clear" />
+      </span>
+    </form>
+
+    <form role="form" method="POST" action="../Scripts/Products/P_delete.php">
+      <h3>DELETE</h3>
+      <input type="number" name="DP_id" placeholder="Remove by Product ID" />
+
+      <span>
+        <input type="submit" id="insert" value="Remove" />
+        <input type="reset" id="reset" value="Clear" />
+      </span>
+    </form>
+
+    <form role="form" method="POST" action="../Scripts/Products/P_select.php">
+      <h3>DISPLAY</h3>
+      <div>
+        Display All Product Records &nbsp;
+        <input type="submit" id="insert" value="View" />
+      </div>
+    </form>
+  </body>
+</html>
